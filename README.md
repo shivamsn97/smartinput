@@ -89,8 +89,8 @@ myshell = Shell()
 myshell.setcallback(handle_query) #handle_query function was defined in the above section
 
 #Optional:
-myshell.intitle("Input: ") #defaults to "> "
-myshell.outtitle("Output: ") #defaults to "< "
+myshell.setintitle("Input: ") #defaults to "> "
+myshell.setouttitle("Output: ") #defaults to "< "
 myshell.setinputcolor(Fore.BLUE)
 myshell.setoutputcolor(Fore.GREEN)
 myshell.setalertcolor(Fore.RED)  # Color for the alert messsage.
