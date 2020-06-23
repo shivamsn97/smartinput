@@ -12,6 +12,7 @@ from colorama import Fore, Style, Back
 def mygetch():
 	if windows:
 		return getch().decode("utf-8")
+		#TODO:  Make getch() work for windows same as it works in linux.
 	return getch()
 
 class History:
