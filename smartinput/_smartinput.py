@@ -1,5 +1,9 @@
 #pip install getch
-from getch import getch, getche
+import os
+if os.name == 'nt':
+    from msvcrt import getch
+else:
+    from getch import getch
 #pip install colorama
 from colorama import Fore, Style, Back
 
