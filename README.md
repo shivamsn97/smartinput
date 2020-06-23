@@ -20,32 +20,32 @@ python setup.py install
 ### Using Smart Input:
 ```python
 from smartinput import sinput
-mystr = input("Enter your name: ") #This parameter is optional
+mystr = sinput("Enter your name: ") #This parameter is optional
 #This will work as a normal input function.
 
-mystr2 = input("Enter your designation: ", hints=["teacher","student","developer","hobbyist"])
+mystr2 = sinput("Enter your designation: ", hints=["teacher","student","developer","hobbyist"])
 #This will show hints whenever user will input something.
 ```
 #### You can further customize the input field:
 ```python
 from smartinput import sinput, Fore
-mystr = input("Name: ", hints=["Shivam", "Tushar", "Pulkit", "Imran"], color=Fore.BLUE, hintcolor=Fore.GREEN)
+mystr = sinput("Name: ", hints=["Shivam", "Tushar", "Pulkit", "Imran"], color=Fore.BLUE, hintcolor=Fore.GREEN)
 ```
 #### Input History
 Yes. You heard it right. sinput supports History. Which means you can be able to arrow keys to navigate to previously used inputs. By default, previously used history is also treated as hints, and current input is automatically added to the provided History object. 
 ```python
 from smartinput import sinput, History, Fore
 myhistory = History()
-str1 = input(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str2 = input(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str3 = input(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str4 = input(">> ", history=myhistorymyhistory, color=Fore.BLUE)
+str1 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
+str2 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
+str3 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
+str4 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
 #You can use up and down arrow keys to navigate to history. Also, history will be shown as hints.
 
-str5 = input(">> ", history=myhistorymyhistory, historyAsHints=False, color=Fore.BLUE)
+str5 = sinput(">> ", history=myhistorymyhistory, historyAsHints=False, color=Fore.BLUE)
 #Here, history will not be considered as hints.
 
-str6 = input(">> ", history=myhistorymyhistory,autohistory=False, color=Fore.BLUE)
+str6 = sinput(">> ", history=myhistorymyhistory,autohistory=False, color=Fore.BLUE)
 #The input of this command will not be added to history automatically.
 ```
 
