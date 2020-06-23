@@ -156,7 +156,7 @@ class Shell:
     def __init__(self,callback = None, exiton = "exit", intitle="> ", outtitle="< "):
         self.intitle=intitle
         self.outtitle=outtitle
-        self.history=_history()
+        self.history=History()
         self.instancerunning = False
         self.call = callback
         self.inputcolor = None
