@@ -42,7 +42,7 @@ str3 = sinput(">> ", history=myhistory, color=Fore.BLUE)
 str4 = sinput(">> ", history=myhistory, color=Fore.BLUE)
 #You can use up and down arrow keys to navigate to history. Also, history will be shown as hints.
 
-str5 = sinput(">> ", history=myhistory, historyAsHints=False, color=Fore.BLUE)
+str5 = sinput(">> ", history=myhistory, historyAsHint=False, color=Fore.BLUE)
 #Here, history will not be considered as hints.
 
 str6 = sinput(">> ", history=myhistory,autohistory=False, color=Fore.BLUE)
