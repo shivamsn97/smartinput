@@ -6,11 +6,13 @@ if sys.version_info < (3,0):
 with open("README.md", 'r') as f: 
     long_description = f.read() 
 
+version = '1.0.6'
+
 import os
 if os.name == 'nt':
     setup(
         name='smartinput',
-        version='1.0.5',
+        version=version,
         python_requires='>=3',
         description='Much better implementation of the python input function, with hints and history support.',
         license="MIT",
@@ -27,10 +29,11 @@ if os.name == 'nt':
                   'Programming Language :: Python :: 3.7',
                   'Programming Language :: Python :: 3.8'
                 ]
+        )
 else:   
     setup(
         name='smartinput',
-        version='1.0.5',
+        version=version,
         python_requires='>=3',
         description='Much better implementation of the python input function, with hints and history support.',
         license="MIT",
@@ -47,4 +50,4 @@ else:
                   'Programming Language :: Python :: 3.7',
                   'Programming Language :: Python :: 3.8'
                 ]
-)
+        )
