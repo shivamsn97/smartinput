@@ -5,6 +5,7 @@ Much better implementation of the python input function, with hints and history 
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install smartinput.
 
+__Note:__ Windows support is temporarily dropped. We are working on a fix and will update it soon.
 ```bash
 pip install smartinput --upgrade
 ```
