@@ -6,7 +6,7 @@ if sys.version_info < (3,0):
 with open("README.md", 'r') as f: 
     long_description = f.read() 
 
-version = '1.0.8'
+version = '1.0.9'
 
 import os
 if os.name == 'nt':
