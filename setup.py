@@ -31,6 +31,7 @@ if os.name == 'nt':
                 ]
         )
 else:   
+	raise RuntimeError("This module is not currently supported on Windows...")
     setup(
         name='smartinput',
         version=version,
