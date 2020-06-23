@@ -52,7 +52,7 @@ def suggestion(query, history, hints):
     
 def sinput(what = "",history=None, hints=None, historyAsHint=True,autohistory= True, eof=None, whatcolor=None, color=None, hintcolor=Fore.MAGENTA):
     print((whatcolor if whatcolor else "") + what + (Style.RESET_ALL if whatcolor else "") + (color if color else ""), end='', flush=True)
-    x = getch()
+    x = str(str(getch()))
     rtn = ""
     mhistory = [""] + history.aslist() if history else []
     hcur = 0
@@ -73,10 +73,10 @@ def sinput(what = "",history=None, hints=None, historyAsHint=True,autohistory= T
             print(rtn[-rval-len(suggest):] if (rval+len(suggest)) else "", end="", flush=True)
             rval=0
         elif ord(x) == 27:
-            x = getch()
+            x = str(getch())
             if (ord(x)==91):
             #67 = right, 68 = left, 65= up, 66= down
-                x = ord(getch())
+                x = ord(str(getch()))
                 if(x == 68 and rval<len(rtn)):
                     print('\b', end="", flush=True)
                     rval +=1
@@ -120,7 +120,7 @@ def sinput(what = "",history=None, hints=None, historyAsHint=True,autohistory= T
             tx = True
         if(suggest and rtn):
             print((rtn[-rval:] if rval else "") +  hintcolor + Style.DIM + suggest + Style.RESET_ALL + (color if color else "") + "\b"*(len(suggest)+rval), end='', flush=True)
-        x = getch()
+        x = str(getch())
     print(' '*len(suggest)+ '\b'*len(suggest) + Style.RESET_ALL)
     if(autohistory and history):
         history.add(rtn)
