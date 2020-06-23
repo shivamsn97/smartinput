@@ -6,7 +6,7 @@ Much better implementation of the python input function, with hints and history 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install smartinput.
 
 ```bash
-pip install smartinput
+pip install smartinput --upgrade
 ```
 
 Or alternatively, you can install the latest version using git:
