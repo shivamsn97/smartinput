@@ -167,10 +167,10 @@ class Shell:
     def setexiton(self, x):
         self.exiton=x
 
-    def intitle(self, x):
+    def setintitle(self, x):
         self.intitle=x
 
-    def outtitle(self,x):
+    def setouttitle(self,x):
         self.outtitle=x
 
     def setinputcolor(self,x):
