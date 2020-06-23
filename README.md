@@ -36,16 +36,16 @@ Yes. You heard it right. sinput supports History. Which means you can use up/dow
 ```python
 from smartinput import sinput, History, Fore
 myhistory = History()
-str1 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str2 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str3 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
-str4 = sinput(">> ", history=myhistorymyhistory, color=Fore.BLUE)
+str1 = sinput(">> ", history=myhistory, color=Fore.BLUE)
+str2 = sinput(">> ", history=myhistory, color=Fore.BLUE)
+str3 = sinput(">> ", history=myhistory, color=Fore.BLUE)
+str4 = sinput(">> ", history=myhistory, color=Fore.BLUE)
 #You can use up and down arrow keys to navigate to history. Also, history will be shown as hints.
 
-str5 = sinput(">> ", history=myhistorymyhistory, historyAsHints=False, color=Fore.BLUE)
+str5 = sinput(">> ", history=myhistory, historyAsHints=False, color=Fore.BLUE)
 #Here, history will not be considered as hints.
 
-str6 = sinput(">> ", history=myhistorymyhistory,autohistory=False, color=Fore.BLUE)
+str6 = sinput(">> ", history=myhistory,autohistory=False, color=Fore.BLUE)
 #The input of this command will not be added to history automatically.
 ```
 
