@@ -149,20 +149,23 @@ class _interact:
         print(self.outtitle + (self.outputcolor if self.outputcolor else "") + x + (Style.RESET_ALL if self.outputcolor else "") ) 
 
     def alert(self, x):
-        print(' '*len(self.outtitle) + (self.alertcolor if self.alertcolor else "" ) + x + (Style.RESET_ALL if self.alertcolor else ""), end="", flush=True)
+        print('\r' +  ' '*len(self.outtitle) + (self.alertcolor if self.alertcolor else "" ) + x + (Style.RESET_ALL if self.alertcolor else ""), end="", flush=True)
         self.alertmsg = x
         
 class Shell:
-    def __init__(self,callback = None, exiton = "exit", intitle="> ", outtitle="< "):
+    def __init__(self,callback = None, exiton = "exit", intitle="> ", outtitle="< ", inputcolor =None, outputcolor=None, alertcolor=None):
         self.intitle=intitle
         self.outtitle=outtitle
         self.history=History()
         self.instancerunning = False
         self.call = callback
-        self.inputcolor = None
-        self.outputcolor = None
-        self.alertcolor = None
+        self.inputcolor = inputcolor
+        self.outputcolor = outputcolor
+        self.alertcolor = alertcolor
         self.exiton = exiton
+
+    def setexiton(self, x):
+        self.exiton=x
 
     def intitle(self, x):
         self.intitle=x

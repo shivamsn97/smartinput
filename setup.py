@@ -8,7 +8,7 @@ with open("README.md", 'r') as f:
 
 setup(
     name='smartinput',
-    version='0.1.8',
+    version='1.0.0',
     python_requires='>=3',
     description='Much better implementation of the python input function, with hints and history support.',
     license="MIT",
