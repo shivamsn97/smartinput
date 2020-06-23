@@ -10,7 +10,7 @@ version = '1.0.7'
 
 import os
 if os.name == 'nt':
-	raise RuntimeError("This module is not currently supported on Windows...")
+    raise RuntimeError("This module is not currently supported on Windows...")
     setup(
         name='smartinput',
         version=version,
