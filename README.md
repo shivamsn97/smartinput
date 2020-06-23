@@ -32,7 +32,7 @@ from smartinput import sinput, Fore
 mystr = sinput("Name: ", hints=["Shivam", "Tushar", "Pulkit", "Imran"], color=Fore.BLUE, hintcolor=Fore.GREEN)
 ```
 #### Input History
-Yes. You heard it right. sinput supports History. Which means you can be able to use up/down arrow keys to navigate to previously used inputs. By default, previously used history is also treated as hints, and current input is automatically added to the provided History object. 
+Yes. You heard it right. sinput supports History. Which means you can use up/down arrow keys to navigate to previously used inputs. By default, previously used history is also treated as hints, and current input is automatically added to the provided History object. 
 ```python
 from smartinput import sinput, History, Fore
 myhistory = History()
