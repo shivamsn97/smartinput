@@ -28,7 +28,7 @@ class History:
     def aslist(self):
         return list(self._hList)
 
-BaseHistory = History(["one","two","three"])
+#BaseHistory = History(["one","two","three"])
 
 def suggestion(query, history, hints):
     if not(query):
