@@ -7,7 +7,8 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install smartin
 
 __Note:__ Windows support is temporarily dropped. We are working on a fix and will update it soon.
 ```bash
-pip install smartinput --upgrade
+pip3 install smartinput --upgrade
+#or pip
 ```
 
 Or alternatively, you can install the latest version using git:
