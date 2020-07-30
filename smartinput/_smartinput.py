@@ -10,10 +10,57 @@ else:
 from colorama import Fore, Style, Back
 
 def mygetch():
-	if windows:
-		return getch().decode("utf-8")
-		#TODO:  Make getch() work for windows same as it works in linux.
-	return getch()
+    if windows:
+        x = getch()
+        print(x)
+        return x
+        #TODO:  Make getch() work for windows same as it works in linux.
+    return getch()
+
+class Keys:
+    NONE = 0
+    UP = 1
+    DOWN = 2
+    RIGHT = 3
+    LEFT = 4
+    TAB = 5
+    #ESC = 6
+    EOF = 7
+    BACK = 8
+    DELETE = 9
+
+    def __init__(self):
+        pass
+
+    def get(self):
+        x = mygetch()
+        if windows:
+            pass
+        else:
+            if(ord(x)==4):
+                return Keys.EOF
+            if(ord(x) == 127):
+                return Keys.BACK
+            if(x== '\t'):
+                return Keys.TAB
+            if ord(x) == 27:
+                x = mygetch()
+                if (ord(x)==91):
+                    #67 = right, 68 = left, 65= up, 66= down
+                    x = ord(mygetch())
+                    try:
+                        lst = {65:Keys.UP, 66:Keys.DOWN, 67:Keys.RIGHT, 68:Keys.LEFT, 51:Keys.DELETE}
+                        key = lst[x]
+                        if key == Keys.DELETE:
+                            mygetch()
+                        return key
+                    except IndexError:
+                        return Keys.NONE
+                return Keys.NONE
+
+while(True):
+    #break
+    mygetch()
 
 class History:
     def __init__(self, default=[]):
