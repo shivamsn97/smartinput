@@ -12,7 +12,7 @@ from colorama import Fore, Style, Back
 def mygetch():
     if windows:
         x = getch()
-        print(x)
+        #print(x)
         return x
         #TODO:  Make getch() work for windows same as it works in linux.
     return getch()
@@ -58,9 +58,11 @@ class Keys:
                         return Keys.NONE
                 return Keys.NONE
 
+
+x = Keys()
 while(True):
     #break
-    mygetch()
+    print(x.get())
 
 class History:
     def __init__(self, default=[]):
