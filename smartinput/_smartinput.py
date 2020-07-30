@@ -57,6 +57,7 @@ class Keys:
                     except IndexError:
                         return Keys.NONE
                 return Keys.NONE
+            return x
 
 
 x = Keys()
