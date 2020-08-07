@@ -175,7 +175,7 @@ def sinput(what = "",history=None, hints=None, historyAsHint=True,autohistory= T
             tx = True
         if(suggest and rtn):
             print((rtn[-rval:] if rval else "") +  hintcolor + Style.DIM + suggest + Style.RESET_ALL + (color if color else "") + "\b"*(len(suggest)+rval), end='', flush=True)
-        x = mygetch()
+        x = keys.get()
     print(' '*len(suggest)+ '\b'*len(suggest) + Style.RESET_ALL)
     if(autohistory and history):
         history.add(rtn)
